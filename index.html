@@ -7,83 +7,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
       font-family: Arial, sans-serif;
     }
 
-    body {
-      background-color: #f4f4f4;
-      color: #333;
-      padding: 5px;
+    body{
+      background-color:#f4f4f4;
+      color:#333;
     }
 
-    /* NAVBAR */
-    nav {
-      background-color: #222;
-      padding: 15px 30px;
-      position: sticky;
-      top: 0;
+    nav{
+      background:#222;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
+    nav ul{
+      list-style:none;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:25px;
     }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
     }
 
-    nav ul li a:hover {
-      color: #00bcd4;
+    nav ul li a:hover{
+      color:#00bcd4;
     }
 
-    /* HEADER */
-    header {
-      background-color: #00bcd4;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
+    nav button{
+      background:#00bcd4;
+      border:none;
+      padding:5px 10px;
+      border-radius:5px;
+      cursor:pointer;
     }
 
-    .details img{
-      object-fit: cover;
+    header{
+      background:#00bcd4;
+      color:white;
+      padding:50px 20px;
+      text-align:center;
     }
 
-    .about p{
-      padding: 4px;
+    header img{
+      width:120px;
+      height:120px;
+      object-fit:cover;
     }
 
-    section {
-      background: white;
-      margin: 30px auto;
-      padding: 30px;
-      max-width: 900px;
-      border-radius: 8px;
+    section{
+      background:white;
+      margin:30px auto;
+      padding:30px;
+      max-width:900px;
+      border-radius:8px;
+      transition:transform 0.3s, box-shadow 0.3s;
     }
 
-    a{
-      text-decoration: none;
-      color: black;
+    section:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.1);
     }
 
-    h2 {
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
+    h2{
+      border-bottom:2px solid #00bcd4;
+      margin-bottom:15px;
+      padding-bottom:8px;
     }
 
-    li{
-      margin-left: 20px;
-      padding: 4px;
+    .bar{
+      width:100%;
+      height:10px;
+      background:#ddd;
+      border-radius:10px;
+      margin-bottom:15px;
+    }
+
+    .fill{
+      height:10px;
+      background:#00bcd4;
+      border-radius:10px;
+    }
+
+    .html{width:90%;}
+    .css{width:85%;}
+    .python{width:70%;}
+    .cpp{width:65%;}
+
+    .btn-view{
+      background:#00bcd4;
+      border:none;
+      padding:5px 10px;
+      margin-left:10px;
+      border-radius:5px;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      font-style:italic;
     }
 
   </style>
@@ -91,67 +124,81 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- HEADER -->
-  <header id="home">
-    <img src="Madhu photo.jpg" width="100", length="100" alt="profile photo" class="rounded-circle border border-2 border-success shadow-sm profile-img">
-    <h1>Madhumidha</h1>
-    <p>Front-end Developer</p>
-  </header>
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Front-end Developer who is passionate about building simple, clean, and responsive websites that provide a smooth user experience. I enjoy turning ideas and designs into functional web pages using modern front-end technologies.<br>
+<header id="home">
+  <img src="Madhu photo.jpg" class="rounded-circle border border-2 border-dark shadow">
+  <h1>Madhumidha</h1>
+  <h4>Front-end Developer | Web Designer</h4>
+  <p><span id="typing"></span></p>
+</header>
 
-I am always eager to learn new technologies and stay updated with the latest trends in web development. I continuously work on improving my skills by practicing, building projects, and exploring better ways to create user-friendly interfaces.
-    </p>
-  
-  </section>
-  <section id="education" class="education">
-    <h2>Education</h2>
-    <p>
-      I am currently pursuing a Bachelor of Computer Applications (BCA) at Kamaraj College. Through my course, I am gaining a strong foundation in programming, web development, and computer applications.
-    </p>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Front-end Developer who enjoys building clean, responsive, and user-friendly websites.
+    I love learning new technologies and continuously improving my skills through practice and projects.
+  </p>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>I have a strong understanding of HTML for creating structured web pages.</li>
-      <li>I use CSS to design and style responsive websites.</li>
-      <li>I have basic knowledge of Python for programming and problem solving.</li>
-      <li>I am familiar with C++ for developing logical and efficient programs.</li>
-    </ul>
-  </section>
+<section id="education">
+  <h2>Education</h2>
+  <p>
+    Bachelor of Computer Applications (BCA) – Kamaraj College  
+    Building strong foundations in programming and web development.
+  </p>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <a href="front page.html"><p>Product Landing Project</p></a>
-    <p>GitHub: github.com/Madhumidha4310</p>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: madhumidha687@gmail.com</p>
-    <p>Linkedin: www.linkedin.com/in/madhu-midha-940272320</p>
-    <p>Phone: +91 9342624303</p>
-  </section>
+<section id="skills">
+  <h2>Skills</h2>
+
+  <p>HTML</p>
+  <div class="bar"><div class="fill html"></div></div>
+
+  <p>CSS</p>
+  <div class="bar"><div class="fill css"></div></div>
+
+  <p>Python</p>
+  <div class="bar"><div class="fill python"></div></div>
+
+  <p>C++</p>
+  <div class="bar"><div class="fill cpp"></div></div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p>Product Landing Page 
+    <a href="front page.html"><button class="btn-view">View</button></a>
+  </p>
+  <p>Restaurant Menu Website 
+    <a href="Restraent menu.html"><button class="btn-view">View</button></a>
+  </p>
+  <p>GitHub: github.com/Madhumidha4310<a href="https://github.com/Madhumidha4310"><button class="btn-view">View</button></a></p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: madhumidha687@gmail.com</p>
+  <p>LinkedIn: www.linkedin.com/in/madhu-midha-940272320<a href="http://www.linkedin.com/in/madhu-midha-940272320"><button class="btn-view">View</button></a></p>
+  <p>Phone: +91 9342624303</p>
+</section>
+
+<footer>
+  “Learning never stops. Every day is a new opportunity.” 🚀
+</footer>
+
+</script>
 
 </body>
 </html>
