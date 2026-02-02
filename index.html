@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 5px;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #222;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #00bcd4;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #00bcd4;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .details img{
+      object-fit: cover;
+    }
+
+    .about p{
+      padding: 4px;
+    }
+
+    section {
+      background: white;
+      margin: 30px auto;
+      padding: 30px;
+      max-width: 900px;
+      border-radius: 8px;
+    }
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
+
+    h2 {
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    li{
+      margin-left: 20px;
+      padding: 4px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="home">
+    <img src="Madhu photo.jpg" width="100", length="100" alt="profile photo" class="rounded-circle border border-2 border-success shadow-sm profile-img">
+    <h1>Madhumidha</h1>
+    <p>Front-end Developer</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Front-end Developer who is passionate about building simple, clean, and responsive websites that provide a smooth user experience. I enjoy turning ideas and designs into functional web pages using modern front-end technologies.<br>
+
+I am always eager to learn new technologies and stay updated with the latest trends in web development. I continuously work on improving my skills by practicing, building projects, and exploring better ways to create user-friendly interfaces.
+    </p>
+  
+  </section>
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <p>
+      I am currently pursuing a Bachelor of Computer Applications (BCA) at Kamaraj College. Through my course, I am gaining a strong foundation in programming, web development, and computer applications.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>I have a strong understanding of HTML for creating structured web pages.</li>
+      <li>I use CSS to design and style responsive websites.</li>
+      <li>I have basic knowledge of Python for programming and problem solving.</li>
+      <li>I am familiar with C++ for developing logical and efficient programs.</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <a href="front page.html"><p>Product Landing Project</p></a>
+    <p>GitHub: github.com/Madhumidha4310</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: madhumidha687@gmail.com</p>
+    <p>Linkedin: www.linkedin.com/in/madhu-midha-940272320</p>
+    <p>Phone: +91 9342624303</p>
+  </section>
+
+</body>
+</html>
